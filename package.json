@@ -1,0 +1,70 @@
+{
+  "name": "ray-template-server",
+  "version": "1.0.0",
+  "description": "ray-template的服务端实现",
+  "repository": "https://github.com/yunkuangao/ray-template-server",
+  "author": "yun <yun@yka.moe>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "clean": "rimraf dist",
+    "lint": "eslint src --max-warnings 0",
+    "dev": "yarn clean && nest start --path tsconfig.json --watch",
+    "build": "yarn clean && yarn lint && nest build --path tsconfig.json",
+    "start": "node dist/main.js",
+    "mg": "typeorm migration:generate -n"
+  },
+  "dependencies": {
+    "@nestjs/axios": "^0.1.0",
+    "@nestjs/serve-static": "^3.0.0",
+    "@nestjs/common": "^9.2.1",
+    "@nestjs/core": "^9.2.1",
+    "@nestjs/jwt": "^10.0.1",
+    "@nestjs/microservices": "^9.2.1",
+    "@nestjs/platform-express": "^9.2.1",
+    "@nestjs/schedule": "^2.1.0",
+    "@nestjs/typeorm": "^9.0.1",
+    "amqp-connection-manager": "^4.1.10",
+    "amqplib": "^0.10.3",
+    "bcrypt": "^5.1.0",
+    "mysql": "^2.18.1",
+    "nestjs-xion": "^4.0.0",
+    "passport-jwt": "^4.0.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0",
+    "sqlite3": "^5.1.6",
+    "typeorm": "^0.3.11",
+    "class-validator": "^0.14.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@nestjs/cli": "^9.1.9",
+    "@nestjs/schematics": "^9.0.4",
+    "@types/amqplib": "^0.10.1",
+    "@types/bcrypt": "^5.0.0",
+    "@types/node": "^18.11.18",
+    "@types/passport-jwt": "^3.0.8",
+    "eslint-plugin-mizyind": "^4.8.2",
+    "husky": "^8.0.3",
+    "rimraf": "^4.1.2",
+    "typescript": "^4.9.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:mizyind/base"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

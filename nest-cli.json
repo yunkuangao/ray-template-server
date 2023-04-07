@@ -1,0 +1,22 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "@nestjs/swagger/plugin",
+        "options": {
+          "dtoFileNameSuffix": [".dto.ts", ".response.ts"]
+        }
+      }
+    ],
+    "assets": [
+      {
+        "include": "static",
+        "outDir": "dist/static",
+        "watchAssets": true
+      }
+    ],
+    "watchAssets": true
+  }
+}
