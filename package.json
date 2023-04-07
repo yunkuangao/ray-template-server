@@ -42,7 +42,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
-    "@nestjs/cli": "^9.1.9",
+    "@nestjs/cli": "^9.3.0",
     "@nestjs/schematics": "^9.0.4",
     "@types/amqplib": "^0.10.1",
     "@types/bcrypt": "^5.0.0",
